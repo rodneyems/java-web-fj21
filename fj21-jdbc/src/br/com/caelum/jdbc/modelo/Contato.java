@@ -1,6 +1,7 @@
 package br.com.caelum.jdbc.modelo;
 
 
+import java.sql.Date;
 import java.util.Calendar;
 
 public class Contato {

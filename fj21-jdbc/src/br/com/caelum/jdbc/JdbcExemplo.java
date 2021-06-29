@@ -20,12 +20,13 @@ public class JdbcExemplo {
 		
 		Connection	conexao	=	new	ConnectionFactory().getConnection();
 		System.out.println("Conexão	aberta!");
-		String sql = "insert into contatos (nome, email, edereco, dataNascimento) values (?,?,?,?)";
+		String sql = "insert into contatos (nome, email, endereco, dataNascimento) values (?,?,?,?)";
 		PreparedStatement stmt = (PreparedStatement) conexao.prepareStatement(sql);
 		stmt.setString(1, rodney.getNome());
 		stmt.setString(2, rodney.getEmail());
 		stmt.setString(3, rodney.getEndereco());
-		stmt.setDate(4,	(java.sql.Date) new	Date(rodney.getDataNascimento().getTimeInMillis()));
+		stmt.setDate(4,	new java.sql.Date(rodney.getDataNascimento().getTimeInMillis()));
+		stmt.execute();
 		stmt.close();
 //		connection.close();
 	}
