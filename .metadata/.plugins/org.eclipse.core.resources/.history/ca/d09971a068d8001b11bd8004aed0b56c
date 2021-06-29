@@ -10,7 +10,7 @@ public class JdbcExemplo {
 
 		Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306", "root", "root");
 		System.out.println("CONECTADO!");
-		conexao.close();
+		conexao.close()
 	}
 
 }

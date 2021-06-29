@@ -7,10 +7,8 @@ import java.sql.SQLException;
 public class JdbcExemplo {
 
 	public static void main(String[] args) throws SQLException {
-
+		// TODO Auto-generated method stub
 		Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306", "root", "root");
-		System.out.println("CONECTADO!");
-		conexao.close();
 	}
 
 }
