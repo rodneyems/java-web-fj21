@@ -20,7 +20,6 @@ public class Contato {
 	private String email;
 	private String endereco;
 	private Calendar dataNascimento;
-	private int primaryKey;
 
 	public Long getId() {
 		return id;
@@ -60,14 +59,6 @@ public class Contato {
 
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
-	}
-
-	public int getPrimaryKey() {
-		return primaryKey;
-	}
-
-	public void setPrimaryKey(int primaryKey) {
-		this.primaryKey = primaryKey;
 	}
 	
 }
