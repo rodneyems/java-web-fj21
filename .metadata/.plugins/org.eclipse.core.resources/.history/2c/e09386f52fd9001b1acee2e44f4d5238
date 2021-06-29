@@ -14,7 +14,7 @@ public class TesteLista {
 		List<Contato> contatos = ContatoDao.getLista();
 
 		for (Contato contato : contatos) {
-			System.out.println(contato);
+			System.out.println(contato.getNome());
 		}
 	}
 

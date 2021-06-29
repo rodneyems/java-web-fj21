@@ -36,12 +36,6 @@ public class Contato {
 		this.nome = nome;
 	}
 
-	@Override
-	public String toString() {
-		return "Contato [id=" + id + ", nome=" + nome + ", email=" + email + ", endereco=" + endereco
-				+ ", dataNascimento=" + dataNascimento + "]";
-	}
-
 	public String getEmail() {
 		return email;
 	}
