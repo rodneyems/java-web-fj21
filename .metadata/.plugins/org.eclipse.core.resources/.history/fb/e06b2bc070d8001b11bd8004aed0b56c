@@ -5,10 +5,10 @@ import java.sql.SQLException;
 
 public class JdbcExemplo {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws Exception {
 		Connection	connection	=	new	ConnectionFactory().getConnection();
 		System.out.println("Conexão	aberta!");
-//		String sql = "insert into contatos (nome, email, edereco, dataNascimento) values (A,B,C,D)";
 		connection.close();
 	}
+
 }
