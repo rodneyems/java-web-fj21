@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1189450527.index
+670936320.index
+3690535342.index
+1475881712.index
+1827658630.index
+3791968881.index
+737778702.index

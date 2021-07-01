@@ -1,0 +1,58 @@
+package br.com.caelum.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.caelum.agenda.dao.ContatoDao;
+import br.com.caelum.agenda.modelo.Contato;
+
+/**
+ * Servlet implementation class AdicionaContatoServlet
+ */
+@WebServlet("/adicionaContato")
+public class AdicionaContatoServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    @Override
+    	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    		PrintWriter out = resp.getWriter();
+    		
+    		String nome = req.getParameter("nome");
+    		String email = req.getParameter("email");
+    		String endereco = req.getParameter("endereco");
+    		String dataTxt = req.getParameter("data");
+    		
+    		Contato contato = new Contato();
+    		contato.setNome(nome);
+    		contato.setEmail(email);
+    		contato.setEndereco(endereco);
+    		
+    		Calendar dataNascimento = Calendar.getInstance();
+    		
+    		Date data;
+			try {
+				data = (Date) new SimpleDateFormat("YYYY-MM-dd").parse(dataTxt);
+				dataNascimento.setTime(data);
+				contato.setDataNascimento(dataNascimento);
+				
+			} catch (ParseException e) {
+				out.println("<h1> ERRO NA CONVERSÃO </h1>");
+				return;
+			}
+    		
+    		ContatoDao dao = new ContatoDao();
+    		dao.adiciona(contato);
+    		out.println("<h1> CONTATO ADD </h1>");
+    		System.out.println(data);
+    	}
+
+}
