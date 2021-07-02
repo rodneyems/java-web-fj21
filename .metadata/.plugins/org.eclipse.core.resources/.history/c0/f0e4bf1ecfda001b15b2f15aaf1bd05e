@@ -10,7 +10,7 @@
 <title>Lista de Contatos</title>
 </head>
 <body>
-	<c:import url="cabecalho.jsp"></c:import>
+	<img alt="logo" src="imagens/caelum.png" max-width="100%">
 
 	<table>
 		<tr>
@@ -49,6 +49,6 @@
 
 			
 	</table>
-	<c:import url="rodape.jsp"></c:import>
+
 </body>
 </html>
