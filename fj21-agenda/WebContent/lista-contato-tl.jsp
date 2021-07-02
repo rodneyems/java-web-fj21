@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
- 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="rodney" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +14,7 @@
 <body>
 	<c:import url="cabecalho.jsp"></c:import>
 
-	<table>
+	<table style="margin: auto;">
 		<tr>
 			<td>ID</td>
 			<td>Nome</td>
@@ -34,21 +36,25 @@
 						<td> Email não informado </td>
 					</c:if>
 					
-					<c:choose>
-						<c:when test="${not empty contato.email }">
-							<td> <a href="mailto:${ contato.email }">${ contato.email }</a></td>
-						</c:when>
-						<c:otherwise>
-							<td> Email não informado </td>
-						</c:otherwise>
-					</c:choose>
+<%-- 					<c:choose> --%>
+<%-- 						<c:when test="${not empty contato.email }"> --%>
+<%-- 							<td> <a href="mailto:${ contato.email }">${ contato.email }</a></td> --%>
+<%-- 						</c:when> --%>
+<%-- 						<c:otherwise> --%>
+<!-- 							<td> Email não informado </td> -->
+<%-- 						</c:otherwise> --%>
+<%-- 					</c:choose> --%>
 					<td>${ contato.endereco }</td>
-					<td>${ contato.dataNascimento.time }</td>
+					<td>
+						<fmt:formatDate value="${ contato.dataNascimento.time }" pattern="dd/MM/yyyy"/>
+					</td>
 				</tr>
 			</c:forEach>
 
 			
 	</table>
+	<rodney:minhaTag texto="qwe" id="qwe"></rodney:minhaTag>
+	
 	<c:import url="rodape.jsp"></c:import>
 </body>
 </html>

@@ -7,6 +7,6 @@
 <title>Veja aqui</title>
 </head>
 <body>
-	<h1>A idade digitada é ${ param.idade } </h1>
+	<h1>A idade digitada é ${ param.idade }</h1>
 </body>
 </html>
