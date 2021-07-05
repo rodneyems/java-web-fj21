@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.4+C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1475881712.index
 3690535342.index
@@ -5,3 +6,13 @@ INDEX VERSION 1.4+C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.
 670936320.index
 1827658630.index
 1189450527.index
+=======
+INDEX VERSION 1.4+C:\Users\rodne\Downloads\repo\java-web-fj21\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2989769996.index
+1189450527.index
+2878237284.index
+642395566.index
+3791968881.index
+899456832.index
+2281835416.index
+>>>>>>> 4065b1a4019bef21a2fbcff23e9bed62cf320b8c
