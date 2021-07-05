@@ -57,9 +57,7 @@ public class AdicionaContatoServlet extends HttpServlet {
     		
     		ContatoDao dao = new ContatoDao();
     		dao.adiciona(contato);
-    		RequestDispatcher dispatcher = req.getRequestDispatcher("/contato-adicionado.jsp");
-    		
-    		dispatcher.forward(req, resp);
+    		RequestDispatcher dispatcher = req.getRequestDispatcher("/contato-adicionado.jsp")
     	}
 
 }
