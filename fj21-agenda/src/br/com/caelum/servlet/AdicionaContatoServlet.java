@@ -41,7 +41,7 @@ public class AdicionaContatoServlet extends HttpServlet {
     		Calendar dataNascimento = Calendar.getInstance();
     		
 			try {
-				System.out.println("ENTRANDO");
+				System.out.println("ENTRANDO kakakkakkakak");
 				Date data = new SimpleDateFormat("yyyy-MM-dd").parse(dataTxt);
 				
 				System.out.println(data);

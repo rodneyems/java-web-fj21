@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 
 	public Connection getConnection() throws SQLException {
-		System.out.println("conectando ...");
+		System.out.println("ABRINDO CONEXÃO ...");
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

@@ -1,0 +1,47 @@
+package br.com.caelum.agenda.logica;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.caelum.agenda.dao.ContatoDao;
+import br.com.caelum.agenda.modelo.Contato;
+
+public class AdicionaContatoLogic implements Logica {
+
+	@Override
+	public String executa(HttpServletRequest request, HttpServletResponse response) {
+		
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		String endereco = request.getParameter("endereco");
+		String dataEmTexto = request.getParameter("dataNascimento");
+		
+		Contato contato = new Contato();
+		contato.setNome(nome);
+		contato.setEndereco(endereco);
+		contato.setEmail(email);
+		
+		Calendar dataNascimento = Calendar.getInstance();
+		
+//		String > Date > Calendar
+		try {
+			Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+			dataNascimento.setTime(data);
+			contato.setDataNascimento(dataNascimento);
+		} catch (ParseException e) {
+			throw new RuntimeException(e);
+		}
+		
+		ContatoDao dao = new ContatoDao();
+		dao.adiciona(contato);
+		
+	
+		return "/contato-adicionado.jsp";
+	}
+
+}
