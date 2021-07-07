@@ -2,9 +2,14 @@ package br.com.caelum.tarefas.modelo;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.Size;
+
 public class Tarefa {
 	private Long id;
-	private String descricao;
+	
+	@Size(min=5, max=200, message="Detalhe mais a tarefa!")
+	private	String	descricao;
+	
 	private boolean finalizado;
 	private Calendar dataFinalizacao;
 

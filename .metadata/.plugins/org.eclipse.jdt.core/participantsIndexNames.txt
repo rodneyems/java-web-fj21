@@ -5,5 +5,7 @@ C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.jst.jsp.co
 \fj21-agenda\src
 C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3343571615.index
 \fj21-tarefas\src
+C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2554076783.index
+\fj21-tarefas\src
 C:\Users\rodne\Downloads\repo\java-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\359640750.index
 \fj21-agenda\src
