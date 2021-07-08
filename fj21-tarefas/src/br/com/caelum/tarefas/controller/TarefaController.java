@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.caelum.tarefas.dao.JdbcTarefaDao;
@@ -32,7 +33,7 @@ public class TarefaController {
 		
 		// ele ira pegar o campo descricao da req e ira linkar esse campo com o do obj
 		new JdbcTarefaDao().adiciona(tarefa);
-		return "tarefa/sucesso";
+		return "redirect:listaTarefas";
 	}
 	@RequestMapping("listaTarefas")
 	public ModelAndView lista() {
@@ -67,5 +68,11 @@ public class TarefaController {
 			JdbcTarefaDao	dao	=	new	JdbcTarefaDao();
 			dao.altera(tarefa);
 			return "redirect:listaTarefas";
+	}
+	@ResponseBody
+	@RequestMapping("finalizaTarefa")
+	public	void	finaliza(Long	id) {
+		JdbcTarefaDao	dao	=	new	JdbcTarefaDao();
+		dao.finaliza(id);
 	}
 }
