@@ -1,0 +1,56 @@
+package br.com.caelum.tarefas.controller;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import br.com.caelum.tarefas.dao.JdbcTarefaDao;
+import br.com.caelum.tarefas.modelo.Tarefa;
+
+@Controller
+public class TarefaController {
+	@RequestMapping("novaTarefa")
+	public String form() {
+		return "tarefa/formulario-tarefa";
+	}
+	
+	@RequestMapping("adicionaTarefa")
+	public String criaTarefa(@Valid Tarefa tarefa,	BindingResult	result) {	
+		/* Validacao programatica o maior problema sao os ifs no caso de mais campos
+		 * if(tarefa.getDescricao() == null || tarefa.getDescricao().equals("")) {
+		 * return "tarefa/formulario"; }
+		 */
+		if(result.hasFieldErrors("descricao"))	{
+			return "tarefa/formulario-tarefa";
+		}
+		
+		// ele ira pegar o campo descricao da req e ira linkar esse campo com o do obj
+		new JdbcTarefaDao().adiciona(tarefa);
+		return "tarefa/sucesso";
+	}
+	@RequestMapping("listaTarefas")
+	public ModelAndView lista() {
+		
+		List<Tarefa> tarefas = new JdbcTarefaDao().lista();
+		ModelAndView modelAndView = new ModelAndView("tarefa/lista");
+		modelAndView.addObject("tarefas", tarefas);
+		
+		return modelAndView;
+	}
+	@RequestMapping("listaTarefas2")
+	public String lista2(Model model) {
+		List<Tarefa> tarefas = new JdbcTarefaDao().lista();
+		model.addAttribute("tarefas", tarefas);
+		return "tarefa/lista";
+	}
+	@RequestMapping("removerTarefa")
+	public String remove(Tarefa tarefa) {
+		
+	}
+}

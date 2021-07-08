@@ -22,15 +22,21 @@
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="br.com.caelum.tarefas.modelo.Tarefa"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="javax.validation.Valid"/>
 <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
-<fullyQualifiedTypeName name="br.com.caelum.tarefas.dao.JdbcTarefaDao"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="br.com.caelum.tarefas.dao.JdbcTarefaDao"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="br.com.caelum.tarefas.dao.JdbcUsuarioDao"/>
+<fullyQualifiedTypeName name="br.com.caelum.tarefas.modelo.Usuario"/>
 </qualifiedTypeNameHistroy>

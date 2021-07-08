@@ -1,0 +1,10 @@
+package br.com.caelum.tarefas.controller;
+
+public class LoginController {
+	@Controller
+	@RequestMapping("loginForm")
+	public	String	loginForm() {
+				return "formulario-login";
+	}
+
+}
