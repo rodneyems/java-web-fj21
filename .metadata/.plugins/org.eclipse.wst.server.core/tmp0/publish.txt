@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Wed Jul 07 22:51:37 BRT 2021
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\rodne\\Downloads\\repo\\java-web\\fj21-tarefas\\WebContent\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE.jar=C\:\\Users\\rodne\\OneDrive\\Documentos\\CAELUM JAVA\\Curso 2\\21\\projeto-agenda\\tomcat-9\\apache-tomcat-9.0.34\\wtpwebapps\\fj21-tarefas\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE.jar
+#Thu Jul 08 21:14:38 BRT 2021
 org.eclipse.jst.jee.server\:fj21-tarefas=C\:\\Users\\rodne\\OneDrive\\Documentos\\CAELUM JAVA\\Curso 2\\21\\projeto-agenda\\tomcat-9\\apache-tomcat-9.0.34\\wtpwebapps\\fj21-tarefas
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\rodne\\Downloads\\repo\\java-web-fj21\\fj21-tarefas\\WebContent\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE.jar=C\:\\Users\\rodne\\OneDrive\\Documentos\\CAELUM JAVA\\Curso 2\\21\\projeto-agenda\\tomcat-9\\apache-tomcat-9.0.34\\wtpwebapps\\fj21-tarefas\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE.jar

@@ -44,6 +44,7 @@
 
 	</table>
 	<a	href="novaTarefa">Criar	nova tarefa</a>
+	<a	href="logout">Sair	do	sistema</a>
 	<script type="text/javascript">
 		function finalizaAgora(id) {
 					$.post("finalizaTarefa",	{'id'	:	id},	function() {

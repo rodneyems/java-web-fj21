@@ -16,6 +16,12 @@ import br.com.caelum.tarefas.modelo.Tarefa;
 
 @Controller
 public class TarefaController {
+	
+	private JdbcTarefaDao dao;
+	
+	public void JdbcTarefaDao() {
+		this.dao = new JdbcTarefaDao();
+	}
 	@RequestMapping("novaTarefa")
 	public String form() {
 		return "tarefa/formulario-tarefa";
@@ -32,13 +38,13 @@ public class TarefaController {
 		}
 		
 		// ele ira pegar o campo descricao da req e ira linkar esse campo com o do obj
-		new JdbcTarefaDao().adiciona(tarefa);
+		dao.adiciona(tarefa);
 		return "redirect:listaTarefas";
 	}
 	@RequestMapping("listaTarefas")
 	public ModelAndView lista() {
 		
-		List<Tarefa> tarefas = new JdbcTarefaDao().lista();
+		List<Tarefa> tarefas = dao.lista();
 		ModelAndView modelAndView = new ModelAndView("tarefa/lista");
 		modelAndView.addObject("tarefas", tarefas);
 		
@@ -46,33 +52,30 @@ public class TarefaController {
 	}
 	@RequestMapping("listaTarefas2")
 	public String lista2(Model model) {
-		List<Tarefa> tarefas = new JdbcTarefaDao().lista();
+		List<Tarefa> tarefas = dao.lista();
 		model.addAttribute("tarefas", tarefas);
 		return "tarefa/lista";
 	}
 	@RequestMapping("removeTarefa")
 	public String remove(Tarefa tarefa) {
-		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.remove(tarefa);
 		
 		return "redirect:listaTarefas";
 	}
 	@RequestMapping("mostraTarefa")
 	public String mostra(Long	id,	Model	model) {
-		JdbcTarefaDao dao = new JdbcTarefaDao();
 		model.addAttribute("tarefa", dao.buscaPorId(id));
 		return "tarefa/mostra";
 	}
 	@RequestMapping("alteraTarefa")
 	public	String	altera(Tarefa	tarefa) {
-			JdbcTarefaDao	dao	=	new	JdbcTarefaDao();
 			dao.altera(tarefa);
 			return "redirect:listaTarefas";
 	}
 	@ResponseBody
 	@RequestMapping("finalizaTarefa")
 	public	void	finaliza(Long	id) {
-		JdbcTarefaDao	dao	=	new	JdbcTarefaDao();
+		JdbcTarefaDao	dao	= new JdbcTarefaDao();
 		dao.finaliza(id);
 	}
 }
