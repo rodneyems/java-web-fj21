@@ -29,13 +29,8 @@
 		<bean 
 			class="br.com.caelum.tarefas.interceptor.AutorizadorInterceptor" />
 	</mvc:interceptors>
-	<bean	id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-			<property	name="driverClassName" value="com.mysql.jdbc.Driver"/>
-			<property	name="url" value="jdbc:mysql://localhost/fj21"/>
-			<property	name="username" value="root"/>
-			<property	name="password" value="root"/>
-	</bean>
-	
+
+
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/messages" />

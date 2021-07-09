@@ -18,7 +18,7 @@ import br.com.caelum.tarefas.modelo.Tarefa;
 @Controller
 public class TarefaController {
 
-	private JdbcTarefaDao dao = null;
+	private final JdbcTarefaDao dao;
 
 	@Autowired
 	public	void TarefasController(JdbcTarefaDao	dao) {
@@ -85,6 +85,7 @@ public class TarefaController {
 	@ResponseBody
 	@RequestMapping("finalizaTarefa")
 	public void finaliza(Long id) {
+		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.finaliza(id);
 	}
 }
